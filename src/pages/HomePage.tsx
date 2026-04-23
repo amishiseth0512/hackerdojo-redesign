@@ -3,6 +3,7 @@ import { BoardSection } from '../components/BoardSection'
 import { DocumentarySection } from '../components/DocumentarySection'
 import { HeroSection } from '../components/HeroSection'
 import { LocationSection } from '../components/LocationSection'
+import { AmbassadorProgramFeatureSection } from '../components/AmbassadorProgramFeatureSection'
 import { MemberBenefitsSection } from '../components/MemberBenefitsSection'
 import { PricingSection } from '../components/PricingSection'
 import { PressSection } from '../components/PressSection'
@@ -17,6 +18,7 @@ export function HomePage() {
       <HeroSection />
       <WelcomeSection />
       <BeginnerPathSection />
+      <AmbassadorProgramFeatureSection />
       <WorkspaceGallerySection />
       <TestimonialSection />
       <MemberBenefitsSection />

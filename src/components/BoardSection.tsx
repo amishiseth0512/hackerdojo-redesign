@@ -13,7 +13,7 @@ export function BoardSection() {
 
         <div className="mt-16 flex flex-wrap justify-center gap-x-10 gap-y-12 md:mt-20 md:gap-x-14 lg:gap-x-16">
           {board.members.map((m) => (
-            <PersonAvatar key={m.name} name={m.name} initials={m.initials} />
+            <PersonAvatar key={m.name} name={m.name} initials={m.initials} href={m.href} photo={m.photo} />
           ))}
         </div>
 
@@ -21,7 +21,7 @@ export function BoardSection() {
 
         <div className="mt-10 flex flex-wrap justify-center gap-14 md:mt-12 md:gap-20">
           {board.advisors.map((m) => (
-            <PersonAvatar key={m.name} name={m.name} initials={m.initials} />
+            <PersonAvatar key={m.name} name={m.name} initials={m.initials} href={m.href} photo={m.photo} />
           ))}
         </div>
       </Container>

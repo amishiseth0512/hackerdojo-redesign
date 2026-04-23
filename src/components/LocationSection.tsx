@@ -28,13 +28,24 @@ export function LocationSection() {
           </div>
 
           <div className="relative min-h-[300px] overflow-hidden rounded-[1.75rem] border border-black/[0.06] bg-neutral-200/90 shadow-inner md:min-h-[340px]">
-            <div className="absolute inset-0 bg-[repeating-linear-gradient(90deg,transparent,transparent_42px,rgba(0,0,0,0.028)_42px,rgba(0,0,0,0.028)_43px)],repeating-linear-gradient(0deg,transparent,transparent_42px,rgba(0,0,0,0.028)_42px,rgba(0,0,0,0.028)_43px)]" />
-            <span className="absolute left-1/2 top-1/2 max-w-[12rem] -translate-x-1/2 -translate-y-1/2 text-center text-sm font-medium leading-snug text-neutral-500">
-              {location.mapPlaceholder}
-            </span>
-            <span className="absolute bottom-4 right-4 rounded-xl border border-black/[0.06] bg-white px-3.5 py-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-neutral-800 shadow-md">
+            <iframe
+              title="Hacker Dojo map preview"
+              className="absolute inset-0 h-full w-full"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              src={`https://www.google.com/maps?q=${encodeURIComponent(location.address)}&output=embed`}
+            />
+
+            <a
+              href={location.mapsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-2xl border border-black/[0.08] bg-white/95 px-4 py-2 text-sm font-semibold text-[#1a73e8] shadow-md backdrop-blur"
+              aria-label="Open Hacker Dojo in Google Maps"
+            >
               Open in Maps
-            </span>
+              <span aria-hidden>↗</span>
+            </a>
           </div>
         </div>
       </Container>
